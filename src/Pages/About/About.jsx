@@ -1,62 +1,57 @@
-import { FaArrowRight, FaFacebook, FaLinkedin, FaGithub, FaEnvelope, FaPhone } from "react-icons/fa";
+import image from "../../assets/images/adi.jpg";
 
 export default function About() {
     return (
-        <div className="flex items-center justify-center py-12" id="about">
-            <div className="px-6 py-6 lg:py-12 w-full max-w-screen-xl bg-[#003C43] rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
+        <section
+            className="flex items-center justify-center bg-gradient-to-br from-[#002B2E] via-[#003C43] to-[#002B2E] py-20 px-4"
+            id="about"
+        >
+            <div className="w-full max-w-screen-xl px-6 lg:py-12">
+                {/* Header */}
+                <div className="text-center mb-12 space-y-6">
+                    <h2 className="text-2xl text-gray-300 font-light sm:text-3xl tracking-wider">
+                        About <span className="text-teal-400 font-semibold">Me</span>
+                    </h2>
+                    <h1 className="text-4xl font-bold text-white sm:text-5xl leading-tight">
+                        Who I Am
+                    </h1>
+                    <p className="text-base text-gray-400 sm:text-lg mt-4 leading-relaxed max-w-3xl mx-auto">
+                        Here's a glimpse into my journey, passions, and approach as a developer and collaborator.
+                    </p>
+                </div>
 
-                {/* Text Content */}
-                <div className="w-full space-y-6">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl font-semibold text-[#003C43]">
-                            <span className="bg-[#E3FEF7] py-3 px-5 rounded-full shadow-md inline-block">About</span>
-                        </h2>
+                {/* Content */}
+                <div className="lg:flex justify-between gap-8">
+                    {/* Decorative Side Block with Image */}
+                    <div className="relative w-full lg:w-1/3 mt-10 lg:mt-0 order-1 lg:order-0">
+                        <div className="absolute -inset-2 bg-teal-500/10 rounded-xl transform rotate-2"></div>
+                        <div className="relative">
+                            {/* Profile Image */}
+                            <img
+                                src={image}
+                                alt="Sudipta Roy Ballave"
+                                className="w-full h-full object-cover rounded-xl"
+                            />
+                        </div>
                     </div>
 
-                    <p className="text-lg text-[#E3FEF7] sm:text-xl mt-4">
-                        Hi! I'm Sudipta Roy Ballave, a Web Developer passionate about building scalable web applications. I started learning programming at university and grew into technologies like JavaScript, React.js, Node.js, MongoDB, and Next.js. I enjoy turning complex problems into simple, efficient solutions through clean code.
-                    </p>
-
-                    <p className="text-lg text-[#E3FEF7] sm:text-xl mt-4">
-                        I specialize in creating interactive, user-friendly websites with smooth UIs and seamless back-end integrations. The satisfaction of seeing users interact with something I built motivates me to focus on quality and real-world impact.
-                    </p>
-                    <p className="text-lg text-[#E3FEF7] sm:text-xl mt-4">
-                        Outside of coding, I find joy in photography, playing football, and immersing myself in music—activities that keep me energized and inspired. When I’m not coding, I enjoy exploring new technologies and staying curious about the ever-evolving tech landscape.
-                    </p>
-
-                    <p className="text-lg text-[#E3FEF7] sm:text-xl mt-4">
-                        I deeply value collaboration and embrace every opportunity to learn and share knowledge. I believe that growth thrives in an environment of like-minded individuals, where we challenge each other to reach new heights. Together, we create impactful work and inspire progress.
-                    </p>
-
-                    {/* Contact Info */}
-                    <div className="text-lg text-[#E3FEF7] sm:text-xl mt-6 space-y-2">
-                        <p className="flex items-center">
-                            <FaEnvelope className="mr-2 text-[#E3FEF7]" /> ballavesudipta@gmail.com
+                    {/* Text Content */}
+                    <div className="w-full lg:w-2/3 space-y-6 order-0 lg:order-1">
+                        <p className="text-base text-[#E3FEF7] sm:text-lg leading-relaxed">
+                            Hi! I'm Sudipta Roy Ballave, a Web Developer passionate about building scalable web applications. My journey began at university, where I dove into programming and mastered technologies like JavaScript, React.js, Node.js, MongoDB, and Next.js. I thrive on transforming complex problems into elegant, efficient solutions with clean code.
                         </p>
-                        <p className="flex items-center">
-                            <FaPhone className="mr-2 text-[#E3FEF7]" /> +8801580311924
+                        <p className="text-base text-[#E3FEF7] sm:text-lg leading-relaxed">
+                            I specialize in crafting interactive, user-friendly websites with seamless UI and robust back-end integrations. The joy of seeing users engage with my creations drives me to prioritize quality and impactful solutions.
+                        </p>
+                        <p className="text-base text-[#E3FEF7] sm:text-lg leading-relaxed">
+                            Beyond coding, I find inspiration in photography, playing football, and listening to music—activities that fuel my creativity. I’m always exploring new technologies, staying curious about the ever-evolving tech world.
+                        </p>
+                        <p className="text-base text-[#E3FEF7] sm:text-lg leading-relaxed">
+                            Collaboration is at my core. I value learning from others and sharing knowledge, believing that growth happens when we challenge and inspire each other to create meaningful work.
                         </p>
                     </div>
-
-                    {/* Social Links */}
-                    <div className="flex space-x-6 mt-6">
-                        <a href="https://www.facebook.com/ballave.sudipta/" target="_blank" rel="noopener noreferrer">
-                            <FaFacebook className="text-[#E3FEF7] text-2xl hover:text-[#003C43] transition duration-300" />
-                        </a>
-                        <a href="https://www.linkedin.com/in/sudipta-roy-ballave-4b9757259/" target="_blank" rel="noopener noreferrer">
-                            <FaLinkedin className="text-[#E3FEF7] text-2xl hover:text-[#003C43] transition duration-300" />
-                        </a>
-                        <a href="https://github.com/SudiptaRoy05" target="_blank" rel="noopener noreferrer">
-                            <FaGithub className="text-[#E3FEF7] text-2xl hover:text-[#003C43] transition duration-300" />
-                        </a>
-                    </div>
-
-                    {/* Hire Me Button */}
-                    <button className="btn bg-[#77B0AA] text-[#E3FEF7] px-5 py-2 rounded-2xl font-semibold flex items-center mt-6">
-                        Hire Me <FaArrowRight className="ml-2" />
-                    </button>
                 </div>
             </div>
-        </div>
+        </section>
     );
-}  
+}

@@ -42,34 +42,46 @@ export default function Skills() {
     };
 
     return (
-        <div className="flex items-center justify-center py-12" id="skill">
-            <div className="px-6 py-6 lg:py-12 w-full max-w-screen-xl bg-[#003C43] rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
-
-                {/* Header Section */}
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl font-semibold text-[#003C43] sm:text-4xl md:text-4xl mb-10">
-                        <span className="bg-[#E3FEF7] py-3 px-5 rounded-full shadow-md inline-block">
-                            My Skills
-                        </span>
+        <section
+            className="flex items-center justify-center bg-gradient-to-br from-[#002B2E] via-[#003C43] to-[#002B2E] py-20 px-4"
+            id="skills"
+        >
+            <div className="w-full max-w-screen-xl px-6 lg:py-12">
+                {/* Header */}
+                <div className="text-center mb-12 space-y-6">
+                    <h2 className="text-2xl text-gray-300 font-light sm:text-3xl tracking-wider">
+                        My <span className="text-teal-400 font-semibold">Skills</span>
                     </h2>
-                    <p className="text-xl text-[#E3FEF7]">
-                        I have experience with various technologies across frontend and backend development.
-                        I continuously improve my skills and stay updated with the latest trends.
-                        Here are some key technologies and tools I work with.
+                    <h1 className="text-4xl font-bold text-white sm:text-5xl leading-tight">
+                        Technical Expertise
+                    </h1>
+                    <p className="text-base text-gray-400 sm:text-lg mt-4 leading-relaxed max-w-3xl mx-auto">
+                        A showcase of the technologies and tools I leverage to build robust, user-friendly applications. I’m dedicated to mastering new skills and staying at the forefront of tech innovation.
                     </p>
-
                 </div>
 
-                {/* Skill Categories */}
-                <div className="space-y-10">
+                {/* Skill Cards */}
+                <div className="space-y-16">
                     {Object.entries(skills).map(([category, skillSet], index) => (
                         <div key={index}>
-                            <h3 className="text-2xl text-[#77B0AA] font-semibold mb-4">{category}</h3>
+                            <h3 className="text-xl font-semibold text-[#E3FEF7] mb-8 pl-4 border-l-4 border-[#77B0AA]">
+                                {category}
+                            </h3>
                             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
                                 {skillSet.map((skill, idx) => (
-                                    <div key={idx} className="p-6 bg-[#135D66] rounded-xl shadow-md transition-transform transform hover:scale-105 hover:shadow-lg text-center">
-                                        <img src={skill.img} alt={skill.name} className="w-[60px] mx-auto transition-transform hover:scale-110" />
-                                        <p className="text-[#E3FEF7] mt-2 font-medium">{skill.name}</p>
+                                    <div
+                                        key={idx}
+                                        className="relative bg-gradient-to-br from-[#77B0AA] to-[#003C43] p-6 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105"
+                                    >
+                                        <div className="absolute -inset-2 bg-teal-500/10 rounded-xl transform rotate-2"></div>
+                                        <div className="relative flex flex-col items-center justify-center">
+                                            <img
+                                                src={skill.img}
+                                                alt={skill.name}
+                                                className="w-16 h-16 object-contain mb-4 transition-transform duration-300 transform hover:scale-110"
+                                            />
+                                            <p className="text-base font-medium text-[#E3FEF7]">{skill.name}</p>
+                                        </div>
                                     </div>
                                 ))}
                             </div>
@@ -77,6 +89,6 @@ export default function Skills() {
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
