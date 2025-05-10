@@ -76,7 +76,7 @@ export default function Projects() {
                     {projects.map((project) => (
                         <div
                             key={project.id}
-                            className="relative bg-gradient-to-br from-[#77B0AA] to-[#003C43] rounded-xl shadow-lg overflow-hidden transform transition hover:scale-105"
+                            className="relative bg-[#003C43] rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
                         >
                             <div className="absolute -inset-2 bg-teal-500/10 rounded-xl transform rotate-2"></div>
                             <div className="relative">
@@ -98,7 +98,7 @@ export default function Projects() {
                                     <div className="flex flex-wrap gap-3">
                                         <button
                                             onClick={() => setSelectedProject(project)}
-                                            className="bg-[#E3FEF7] text-[#003C43] px-4 py-2 rounded-lg font-semibold text-sm hover:bg-[#77B0AA] transition"
+                                            className="bg-[#E3FEF7] text-[#003C43] px-4 py-2 rounded-lg font-semibold text-sm hover:bg-[#77B0AA] hover:text-white transition-all duration-300"
                                         >
                                             Details
                                         </button>
@@ -106,7 +106,7 @@ export default function Projects() {
                                             href={project.liveLink}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="bg-[#77B0AA] text-[#003C43] px-4 py-2 rounded-lg font-semibold text-sm hover:bg-[#E3FEF7] transition"
+                                            className="bg-[#77B0AA] text-[#003C43] px-4 py-2 rounded-lg font-semibold text-sm hover:bg-[#E3FEF7] hover:text-[#003C43] transition-all duration-300"
                                         >
                                             Live Link
                                         </a>
@@ -114,7 +114,7 @@ export default function Projects() {
                                             href={project.repoLink}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="bg-[#003C43] text-[#E3FE Scroll to topF7] px-4 py-2 rounded-lg font-semibold text-sm border border-[#E3FEF7] hover:bg-[#135D66] transition"
+                                            className="bg-[#003C43] text-[#E3FEF7] px-4 py-2 rounded-lg font-semibold text-sm border border-[#E3FEF7] hover:bg-[#135D66] hover:scale-105 transition-all duration-300"
                                         >
                                             Repository
                                         </a>
@@ -127,11 +127,11 @@ export default function Projects() {
 
                 {/* Modal */}
                 {selectedProject && (
-                    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 p-4 z-50">
-                        <div className="bg-gradient-to-br from-[#002B2E] to-[#003C43] max-w-4xl w-full p-8 rounded-xl shadow-xl relative">
+                    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 p-4 z-50 transition-all duration-300">
+                        <div className="bg-gradient-to-br from-[#002B2E] to-[#003C43] max-w-4xl w-full p-8 rounded-xl shadow-xl relative transform transition-all duration-500">
                             <button
                                 onClick={() => setSelectedProject(null)}
-                                className="text-[#E3FEF7] absolute top-4 right-6 hover:text-teal-400 transition"
+                                className="text-[#E3FEF7] absolute top-4 right-6 hover:text-teal-400 transition-all duration-300"
                             >
                                 <FaTimes size={24} />
                             </button>
@@ -183,7 +183,7 @@ export default function Projects() {
                                     href={selectedProject.liveLink}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="bg-[#77B0AA] text-[#003C43] px-6 py-2 rounded-lg font-semibold text-sm hover:bg-[#E3FEF7] transition hover:scale-105"
+                                    className="bg-[#77B0AA] text-[#003C43] px-6 py-2 rounded-lg font-semibold text-sm hover:bg-[#E3FEF7] hover:text-[#003C43] transition-all duration-300"
                                 >
                                     Live Link
                                 </a>
@@ -191,7 +191,7 @@ export default function Projects() {
                                     href={selectedProject.repoLink}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="bg-[#003C43] text-[#E3FEF7] px-6 py-2 rounded-lg font-semibold text-sm border border-[#E3FEF7] hover:bg-[#135D66] transition hover:scale-105"
+                                    className="bg-[#003C43] text-[#E3FEF7] px-6 py-2 rounded-lg font-semibold text-sm border border-[#E3FEF7] hover:bg-[#135D66] hover:scale-105 transition-all duration-300"
                                 >
                                     GitHub Repo
                                 </a>
